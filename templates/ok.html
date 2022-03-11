@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ok</title>
+  </head>
+  <body onload="setTimeout(myFunction, 1000);">
+    <h1>Message has been send {{m}}</h1>
+
+    <script>
+      function myFunction() {
+        window.location.replace("{% url 'app:index'%}");   
+      }
+      
+    </script>
+  </body>
+</html>
