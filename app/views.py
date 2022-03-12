@@ -48,7 +48,7 @@ def cform(request):
             message = form.cleaned_data['message']
             email_from = settings.EMAIL_HOST_USER
             recipient_list = [email_to,email_from]
-            send_mail( subject,message,email_from , [recipient_list[1]] ,fail_silently=False)
+            send_mail( subject,'from '+email_to +': /n'+ message,email_from , [recipient_list[1]] ,fail_silently=False)
             send_mail( subject,'Prakash Thapa: Thanks for contacting us',email_from , [recipient_list[0]] ,fail_silently=False)
         # send_mail( subject, message, email_from, recipient_list )
            
